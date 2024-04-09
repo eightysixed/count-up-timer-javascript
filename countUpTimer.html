@@ -73,7 +73,7 @@
 
 <script>
  window.onload = function() {
-   countUpFromTime("Jan 1, 2000 12:00:00", "countUp");
+   countUpFromTime("Jan 1, 2000 12:00:00", "countUp"); // Original start date and time
  };
  function countUpFromTime(countFrom, id) {
    countFrom = new Date(countFrom).getTime();
@@ -86,7 +86,7 @@
        secondsPerHour = 60 * 60 * 1000;
    days = Math.floor(timeDifference / (secondsPerDay) * 1);
    years = Math.floor(days / 365);
-   if (years > 1){ days = days - (years * 365) }
+   if (years > 0){ days = days - (years * 365) }
    hours = Math.floor((timeDifference % (secondsPerDay)) / (secondsPerHour) * 1);
    minutes = Math.floor(((timeDifference % (secondsPerDay)) % (secondsPerHour)) / (60 * 1000) * 1);
    seconds = Math.floor((((timeDifference % (secondsPerDay)) % (secondsPerHour)) % (60 * 1000)) / 1000 * 1);
